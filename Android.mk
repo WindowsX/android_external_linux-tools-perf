@@ -92,7 +92,7 @@ LOCAL_SRC_FILES := $(libperf_src_files)
 LOCAL_SRC_FILES += \
 	arch/arm/util/dwarf-regs.c
 
-LOCAL_CFLAGS := -DNO_NEWT_SUPPORT -DNO_LIBPERL -DNO_LIBPYTHON -std=gnu99
+LOCAL_CFLAGS := -DNO_NEWT_SUPPORT -DNO_LIBPERL -DNO_LIBPYTHON -std=gnu99 -fno-strict-aliasing
 
 ifneq ($(mac_sdk_version),10.9)
 LOCAL_CFLAGS += -DNO_STRLCPY
@@ -132,7 +132,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(libperf_src_files)
 
-LOCAL_CFLAGS := -DNO_NEWT_SUPPORT -DNO_LIBPERL -DNO_LIBPYTHON -std=gnu99
+LOCAL_CFLAGS := -DNO_NEWT_SUPPORT -DNO_LIBPERL -DNO_LIBPYTHON -std=gnu99 -fno-strict-aliasing
 
 # temporary until bfd.h is added
 LOCAL_CFLAGS += -DNO_DEMANGLE
